@@ -45,7 +45,7 @@ class Application
   def handle_add(search_term)
     if @@items.include?(search_term)
       @@cart << search_term
-      return "added #{search_term}"
+      return "added #{cart.last}"
     else
       return "We don't have that item."
     end
