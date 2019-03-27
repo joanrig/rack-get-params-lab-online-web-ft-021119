@@ -47,7 +47,7 @@ class Application
       @@cart << search_term
       resp.write "added #{search_term}"
     else
-      return "Couldn't find #{search_term}"
+      return "We don't have that item."
     end
   end
 
