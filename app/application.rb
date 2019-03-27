@@ -42,8 +42,8 @@ class Application
     end
   end
 
-  def handle_add(item)
-    if @@items.include?(item)
+  def handle_add(search_term)
+    if @@items.include?(search_term)
       @@cart << search_term
       resp.write "added #{search_term}"
     else
