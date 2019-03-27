@@ -42,9 +42,9 @@ class Application
     end
   end
 
-  def handle_add(search_term)
-    if @@items.include?(search_term)
-      binding.pry
+  def handle_add(item)
+    binding.pry
+    if @@items.include?(item)      
       @@cart << search_term
       resp.write "added #{search_term}"
     else
