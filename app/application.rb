@@ -44,6 +44,7 @@ class Application
 
   def handle_add(search_term)
     if @@items.include?(search_term)
+      binding.pry
       @@cart << search_term
       resp.write "added #{search_term}"
     else
