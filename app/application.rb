@@ -43,7 +43,6 @@ class Application
   end
 
   def handle_add(item)
-    binding.pry
     if @@items.include?(item)
       @@cart << search_term
       resp.write "added #{search_term}"
