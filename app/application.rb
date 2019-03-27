@@ -25,7 +25,7 @@ class Application
       end
 
     elsif req.path.match(/add/)
-      seach_term = req.params["q"]
+      seach_term = req.params["item"]
       resp.write handle_add(search_term)
 
     else
