@@ -1,7 +1,7 @@
 class Application
 
   @@items = ["Apples","Carrots","Pears"]
-  @@cart
+  @@cart = []
 
   def call(env)
     resp = Rack::Response.new
@@ -44,7 +44,7 @@ class Application
 
   def handle_add(item)
     binding.pry
-    if @@items.include?(item)      
+    if @@items.include?(item)
       @@cart << search_term
       resp.write "added #{search_term}"
     else
